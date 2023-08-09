@@ -2,42 +2,50 @@ using System;
 
 public class testScore
 {
-	
-	public static void Main()
-	{
-	
-		string str1;
-		double dbl1;
+    public static void Main()
+    {
+        // Declaring the variables
+        string str1;
+        double dbl1;
 
-		Console.WriteLine("Welcome to the Acme Student Test Score comenter");
+        // Welcome message
+        Console.WriteLine("Welcome to the Acme Student Test Score comenter");
 
-		Console.WriteLine("Enter your name");
-		str1 = Console.ReadLine();
+        // Prompt user for their name and get their input
+        Console.WriteLine("Enter your name");
+        str1 = Console.ReadLine();
 
-		Console.WriteLine("Enter the test score");
-		dbl1 = Double.Parse(Console.ReadLine());
+        // Prompt user for test score and get their test score input , then convert to their input to double
+        Console.WriteLine("Enter the test score");
+        dbl1 = Double.Parse(Console.ReadLine());
 
-		Console.WriteLine("Hello {0}", str1);
-		Console.WriteLine("You scored {0}", dbl1);
+        // Show user's name and entered test score
+        Console.WriteLine("Hello {0}", str1);
+        Console.WriteLine("You scored {0}", dbl1);
 
-		if(dbl1 < 40)
-		{
-			if (dbl1 > 0)
-			{ 
-				Console.WriteLine("This a FAIL score");
-			}
-		}
-		if ((dbl1 >= 40) && (dbl1 <= 100))
-		{
-			Console.WriteLine("This is a PASS score");
+        // Look up if the score is less than 40  which is fail(Fail)
+        if (dbl1 < 40)
+        {
+            // Check if the score greater than 0 
+            if (dbl1 > 0)
+            {
+                Console.WriteLine("This a FAIL score");
+            }
+        }
 
-			if (dbl1 >= 75)
-				Console.WriteLine("You did very well!");
-		}
-		else
-		{
-			Console.WriteLine("Oh dear - you have put in a wrong test score");
-		}
-	} 
+        // Check the score and check if is between 40 and 100 (Pass)
+        if ((dbl1 >= 40) && (dbl1 <= 100))
+        {
+            Console.WriteLine("This is a PASS score");
+
+            // Check if the score is 75 or above and show (Very well) message
+            if (dbl1 >= 75)
+                Console.WriteLine("You did very well!");
+        }
+        else
+        {
+            // show an error message for invalid test scores
+            Console.WriteLine("Oh dear - you have put in a wrong test score");
+        }
+    }
 }
-
